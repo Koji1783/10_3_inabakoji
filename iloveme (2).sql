@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2020 年 7 月 24 日 07:21
+-- 生成日時: 2020 年 7 月 30 日 14:09
 -- サーバのバージョン： 10.4.11-MariaDB
 -- PHP のバージョン: 7.4.6
 
@@ -42,10 +42,9 @@ CREATE TABLE `project_table` (
 --
 
 INSERT INTO `project_table` (`id`, `higai_name`, `kagai_namae`, `kagai_name`, `detail`, `jidan_money`, `budget`) VALUES
-(1, '@Becky_bekiko', '', '@testkagaiman1234', 'ベッキー死ね', 500000, 1500000),
-(2, '@harukazechan', '', '@testkagaiman5678', '彼女の両親自体が失敗作', 2654000, 3000000),
 (6, '@higan1208', '誹謗中傷ツイート実験', '@Z5TEGjgWE4EQ5O0', '@higan1208 \r\nおまえなんていなくなればいい', 100000, 80000),
-(7, '@higan1208', '誹謗中傷ツイート実験', '@Z5TEGjgWE4EQ5O0', '@higan1208 はい、人生そこまで。\r\nよくできました、そのまま死んでください。', NULL, NULL);
+(9, '@higan1208', '誹謗中傷ツイート実験', '@Z5TEGjgWE4EQ5O0', '@higan1208 はい、人生そこまで。\r\nよくできました、そのまま死んでください。', 1000000, 200000),
+(10, '@Becky_bekiko', 'peco', '@peco65232741', '@Becky_bekiko やべえのは貴方の下半身', 300000, 150000);
 
 -- --------------------------------------------------------
 
@@ -111,7 +110,8 @@ INSERT INTO `yell_table` (`id`, `p_id`, `username`, `message`, `money`) VALUES
 (13, 2, 'test', 'ひどい！失礼にもほどがある。\r\n許せない。', 1000),
 (14, 6, 'test', 'どんな失敗をしても、ヒガンさんは、ヒガンさん。なにがあっても私たちがそばにいます。', 8000),
 (15, 6, 'test', '負けないで！\r\n一緒に戦おう！\r\n', 1000),
-(16, 6, 'test', '私がいじめられていた時、ヒガンさんのラジオで励まされていました。これからも応援しています。', 5000);
+(16, 6, 'test', '私がいじめられていた時、ヒガンさんのラジオで励まされていました。これからも応援しています。', 5000),
+(17, 9, 'bengo1', 'ファイト', 48000);
 
 --
 -- ダンプしたテーブルのインデックス
@@ -143,7 +143,7 @@ ALTER TABLE `yell_table`
 -- テーブルのAUTO_INCREMENT `project_table`
 --
 ALTER TABLE `project_table`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- テーブルのAUTO_INCREMENT `users_table`
@@ -155,7 +155,7 @@ ALTER TABLE `users_table`
 -- テーブルのAUTO_INCREMENT `yell_table`
 --
 ALTER TABLE `yell_table`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
